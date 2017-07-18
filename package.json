@@ -1,16 +1,14 @@
 {
-  "name": "redux-thunk",
-  "version": "2.2.0",
-  "description": "Thunk middleware for Redux.",
+  "name": "fsa-redux-thunk",
+  "version": "2.2.0-alpha.1",
+  "description": "FSA Thunk middleware for Redux.",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
-  "typings": "./index.d.ts",
   "files": [
     "lib",
     "es",
     "src",
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf lib dist es",
@@ -26,17 +24,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/redux-thunk.git"
+    "url": "https://github.com/andrewzey/fsa-redux-thunk.git"
   },
-  "homepage": "https://github.com/gaearon/redux-thunk",
+  "homepage": "https://github.com/andrewzey/fsa-redux-thunk",
   "keywords": [
     "redux",
     "thunk",
     "middleware",
     "redux-middleware",
-    "flux"
+    "flux",
+    "flux standard actions",
+    "fsa"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com>",
+  "contributors": [
+    "Dan Abramov <dan.abramov@me.com>",
+    "Andrew Zey <andrew@andrewzey.com>"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -70,9 +73,13 @@
     "eslint-plugin-react": "^4.1.0",
     "mocha": "^2.2.5",
     "redux": "^3.4.0",
+    "redux-actions": "^2.2.1",
     "rimraf": "^2.5.2",
-    "typescript": "^1.8.10",
-    "typescript-definition-tester": "0.0.4",
+    "sinon": "^2.3.8",
+    "sinon-chai": "^2.12.0",
     "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "flux-standard-action": "^1.2.0"
   }
 }

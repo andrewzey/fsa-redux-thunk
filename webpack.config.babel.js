@@ -10,9 +10,9 @@ const plugins = [
   }),
 ];
 
-const filename = `redux-thunk${NODE_ENV === 'production' ? '.min' : ''}.js`;
+const filename = `fsa-redux-thunk${NODE_ENV === 'production' ? '.min' : ''}.js`;
 
-NODE_ENV === 'production'  && plugins.push(
+NODE_ENV === 'production' && plugins.push(
   new webpack.optimize.UglifyJsPlugin({
     compressor: {
       pure_getters: true,
@@ -38,7 +38,7 @@ export default {
   output: {
     path: path.join(__dirname, 'dist'),
     filename,
-    library: 'ReduxThunk',
+    library: 'FsaReduxThunk',
     libraryTarget: 'umd',
   },
 
