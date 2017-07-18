@@ -1,6 +1,6 @@
 {
   "name": "fsa-redux-thunk",
-  "version": "2.2.0-alpha.1",
+  "version": "2.2.0",
   "description": "FSA Thunk middleware for Redux.",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
