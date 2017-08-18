@@ -4,7 +4,7 @@ FSA Redux Thunk
 Fork of [`redux-thunk` middleware](https://github.com/gaearon/redux-thunk) that enforces
 [Flux Standard Actions](https://github.com/acdlite/flux-standard-action).
 
-[![build status](https://img.shields.io/travis/andrewzey/redux-thunk/master.svg?style=flat-square)](https://travis-ci.org/andrewzey/fsa-redux-thunk)
+[![build status](https://img.shields.io/travis/andrewzey/fsa-redux-thunk/master.svg?style=flat-square)](https://travis-ci.org/andrewzey/fsa-redux-thunk)
 [![npm version](https://img.shields.io/npm/v/fsa-redux-thunk.svg?style=flat-square)](https://www.npmjs.com/package/fsa-redux-thunk)
 [![npm downloads](https://img.shields.io/npm/dm/fsa-redux-thunk.svg?style=flat-square)](https://www.npmjs.com/package/fsa-redux-thunk)
 
