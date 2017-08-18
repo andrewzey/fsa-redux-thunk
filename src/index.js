@@ -7,7 +7,11 @@ function isThunk(payload) {
 function createFsaThunkMiddleWare(extraArgument) {
   return ({ dispatch, getState }) => next => (action) => {
     if (isFSA(action) && isThunk(action.payload)) {
-      dispatch(Object.assign({}, action, { payload: null }));
+      dispatch(Object.assign({}, action, {
+        payload: action.meta && action.meta.preThunkPayload
+          ? action.meta.preThunkPayload
+          : null,
+      }));
       return action.payload(dispatch, getState, extraArgument);
     }
     return next(action);

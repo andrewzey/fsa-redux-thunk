@@ -71,6 +71,21 @@ describe('Redux FSA Thunk Middleware', () => {
           });
         });
 
+        it('dispatches with preThunkPayload, if defined in meta', () => {
+          const localFsaThunkAction = createAction(
+            'FSA_THUNK',
+            () => thunkSpy,
+            payload => ({ preThunkPayload: payload })
+          )('foo');
+          actionHandler(localFsaThunkAction);
+          expect(dispatchSpy).to.have.been.called;
+          expect(dispatchSpy).to.have.been.calledWith({
+            type: fsaThunkAction.type,
+            payload: 'foo',
+            meta: { preThunkPayload: 'foo' },
+          });
+        });
+
         it('calls the thunk with dispatch and getState', () => {
           expect(thunkSpy).to.have.been.called;
           expect(thunkSpy).to.have.been.calledWith(dispatchSpy, getStateSpy);
